@@ -1,0 +1,349 @@
+body {
+
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+
+
+.fixed {
+  position: initial;
+
+}
+
+.center-text {
+  position: sticky;
+  text-align: center;
+  background-color: red;
+  padding: 0.09911px;
+
+
+}
+
+/*
+.navbar {
+
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  align-items: baseline;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-linksa {
+  color: rgb(11, 30, 201);
+  text-decoration: none;
+}
+
+.nav-linksa:hover {
+  color: red;
+}
+
+
+.menu {
+  color: rgb(11, 30, 201);
+  text-decoration: none display: flex;
+}
+
+.menu-item {
+  position: relative;
+  margin-right: 20px;
+}
+
+/* Styling for the main menu link 
+.menu-item a {
+  text-decoration: none;
+  color: blue;
+  align-items: baseline;
+
+}
+
+
+.dropdown {
+  display: none;
+  position: absolute;
+
+  background-color: white;
+  padding: 1px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+
+}
+
+
+.dropdown li a {
+  text-decoration: none;
+  color: #1E2E5F;
+  display: block;
+  padding: 1px 10px;
+}
+
+
+.menu-item:hover .dropdown {
+  display: block;
+}
+
+
+.dropdown li a:hover {
+  color: red;
+}
+
+.nav-button {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+.nav-button:hover {
+  background-color: #f30505;
+}
+
+.nav-button-shop {
+  background-color: #5044b2;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+.nav-button-shop:hover {
+  background-color: #020254;
+}
+*/
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: var(--primary-dark);
+}
+
+.logo img {
+  width: 100px;
+  height: 40px;
+}
+
+/* navigation bar */
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--primary-dark);
+  padding: 10px 20px;
+  background-color: var(--primary-light);
+  border: 2px solid var(--button-color);
+  border-radius: 8px;
+  font-size: 16px;
+  display: block;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  transform: scale(1.1);
+  background-color: var(--primary-blue);
+  color: var(--button-color);
+}
+
+.body {
+  background-image: url('images/eve.jpg');
+  /* Replace with your image URL */
+  background-size: cover;
+  /* Cover the entire section */
+  background-position: center;
+  /* Center the image */
+  padding: 100px;
+  /* Add some padding */
+  color: white;
+  /* Text color */
+  position: inherit;
+}
+
+/* Event  */
+.events-section {
+  padding: 20px;
+  border: #020254;
+  border-width: 1px;
+}
+
+.event-card {
+  background-color: white;
+
+
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: #020254;
+}
+
+.event-card:hover {
+  border-color: #c82333;
+}
+
+.event-card h3 {
+  margin: 0 0 10px;
+}
+
+.event-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.ticket-button {
+  margin-top: 12px;
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.ticket-button:hover {
+  background-color: black;
+}
+
+
+.container {
+  color: white;
+
+
+  background-color: #1d3a87;
+}
+
+.movement {
+  color: white;
+}
+
+.signup-form {
+  position: relative;
+  left: 5px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="text"] {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.submit-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+
+  color: #1d3a87;
+  cursor: pointer;
+}
+
+.links {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+}
+
+
+.links a img {
+  width: 40px;
+  height: 40px;
+  transition: filter 0.3s ease;
+}
+
+.links a img:hover {
+  filter: invert(100%) sepia(50%) saturate(2000%) hue-rotate(200deg);
+}
+
+
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: white;
+}
+
+.paid {
+  background-color: #1d3a87;
+  border: rgb(218, 17, 17);
+  color: white;
+  padding: 10px 3px;
+  margin-left: 0px;
+
+  text-decoration: none;
+}
+
+
+
+.last {
+  position: relative;
+  color: white;
+  text-size-adjust: SMALL;
+  margin-bottom: 2px;
+
+
+}
+
+
+
+.footer {
+  background-color: #1d3a87;
+  color: white;
+  padding: 50px;
+  text-align: end;
+}
+
+
+.footer a {
+  padding: 59;
+  color: white;
+  align-items: end;
+  text-decoration: none;
+  margin: 0 1Opx;
+
+}
+
+.footer a:hover {
+  color: #3b3b97;
+}
