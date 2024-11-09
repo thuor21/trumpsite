@@ -1,0 +1,620 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;  /* Smooth transition */
+}
+
+/* Color Palette */
+:root {
+    --primary-dark: #1b1f3a;
+    --primary-blue: #283593;
+    --primary-light: #e3f2fd;
+    --text-light: #ffffff;
+    --button-color: #ffb300;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: var(--primary-dark);
+}
+
+.logo img {
+    width: 100px;
+    height: 40px;
+}
+/* navigation bar */
+nav {
+    display: flex;
+    justify-content: center; 
+    padding: 20px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: var(--primary-dark); 
+    padding: 10px 20px;
+    background-color: var(--primary-light); 
+    border: 2px solid var(--button-color);
+    border-radius: 8px; 
+    font-size: 16px;
+    display: block;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; 
+  }
+  
+  nav ul li a:hover {
+    transform: scale(1.1); 
+    background-color: var(--primary-blue); 
+    color: var(--button-color);
+  }
+  
+
+/* Introduction Section */
+.introduction {
+    text-align: center;
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    padding: 4em 2em;
+}
+
+.introduction h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.introduction p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.cta-button {
+    padding: 0.8em 2em;
+    font-size: 1em;
+    color: var(--primary-dark);
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #ffa000;
+}
+
+/* About Section */
+.about {
+    background-color: var(--primary-light);
+}
+
+.about h2 {
+    color: var(--primary-dark);
+    font-size: 2.2em;
+    margin-bottom: 1em;
+}
+
+.bio-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.highlight {
+    background-color: var(--text-light);
+    border-radius: 8px;
+    padding: 1.5em;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.highlight:hover {
+    transform: scale(1.05);
+}
+
+.highlight h3 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5em;
+}
+
+.highlight p {
+    color: var(--primary-dark);
+}
+
+/* Vision Section */
+.vision {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+}
+
+.vision h2 {
+    font-size: 2.2em;
+    margin-bottom: 1em;
+    color: var(--button-color);
+}
+
+.vision-points {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.point {
+    background-color: var(--primary-light);
+    border-radius: 8px;
+    padding: 1.5em;
+    width: 250px;
+    text-align: center;
+    color: var(--primary-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.point h3 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5em;}
+
+
+/* Goals Section */
+.goals {
+    background-color: var(--primary-light);
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.goals h2 {
+    color: var(--primary-dark);
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.goal-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.goal-card {
+    background-color: var(--text-light);
+    border-radius: 8px;
+    padding: 2em;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.goal-card img {
+    width: 50px;
+    margin-bottom: 1em;
+}
+
+.goal-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5em;
+}
+
+.goal-card p {
+    color: var(--primary-dark);
+}
+
+.goal-card:hover {
+    transform: scale(1.05);
+}
+
+/* Events Section */
+.events {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.events h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.events ul {
+    list-style: none;
+    padding: 0;
+}
+
+.events li {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+
+.events li:hover {
+    color: var(--button-color);
+}
+
+/* Donate Section */
+.donate {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    text-align: center;
+    padding: 4em 2em;
+}
+
+.donate h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.donate-button {
+    padding: 0.8em 2em;
+    font-size: 1em;
+    color: var(--primary-dark);
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.donate-button:hover {
+    background-color: #ffa000;
+}
+/* gallery slider*/
+.banner{
+    width: 100%;
+    height: 100vh;
+    text-align: centre;
+    overflow: hidden;
+    position: relative;
+
+}
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 30s linear infinite ;
+    z-index: 2;
+
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-10deg) rotateY(360deg); 
+    }
+
+}
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg ))
+        translateZ(550px);
+
+}
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .content .model{
+  background-image: url(images/image12.png);  
+  width: 100%;
+  height: 70vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-size: auto 120%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 1;
+  background-color: transparent;
+}
+
+/* Footer */
+
+footer {
+    background-color: #00274d;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+}
+
+.social-icons img {
+    width: 30px; 
+    height: auto;
+    transition: transform 0.3s ease; 
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+.social-icons a:hover {
+    opacity: 0.8; 
+}
+
+
+/* Get Involved Page Styles */
+.get-involved {
+    padding: 40px;
+    background-color: var(--primary-light);
+}
+
+/* Introduction Section */
+.intro {
+    background-color: var(--primary-dark); 
+    color: var(--primary-light);
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.intro h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--primary-light);
+}
+
+/* Form Section */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--primary-light);
+    padding: 30px;
+    border: 2px solid var(--primary-dark); 
+    border-radius: 8px;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid var(--primary-dark);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--button-color); 
+}
+
+form textarea {
+    height: 150px; 
+}
+
+form button {
+    padding: 12px 25px;
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--button-color); 
+    transform: scale(1.05);
+}
+
+
+/* General Styles for New Sections */
+.about, .vision {
+    padding: 4em 2em;
+    text-align: center;
+}
+
+/* Vision Section */
+.vision {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+}
+
+.vision h2 {
+    font-size: 2.2em;
+    margin-bottom: 1em;
+    color: var(--button-color);
+}
+
+.vision-points {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.point {
+    background-color: var(--primary-light);
+    border-radius: 8px;
+    padding: 1.5em;
+    width: 250px;
+    text-align: center;
+    color: var(--primary-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.point h3 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5em;
+}
+
+/* Events Section */
+.events ul {
+    list-style: none;
+    padding: 0;
+}
+
+.events li {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+
+.events li:hover {
+    color: var(--button-color);
+}
+/* Wrapper for the shared background image */
+.vision-events-wrapper {
+    background-image: url('images/background.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 4em 2em;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    border-radius: 8px;
+    position: relative; 
+}
+
+.vision-events-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1;
+}
+
+
+.vision,
+.events {
+    position: relative;
+    z-index: 2; 
+    text-align: center;
+    padding: 3em 2em;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+
+/* Donate Section */
+.donate-button {
+    padding: 0.8em 2em;
+    font-size: 1em;
+    color: var(--primary-dark);
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.donate-button:hover {
+    background-color: #ffa000;
+    transform: scale(1.05);
+}
+
+/*tablet responsiveness */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .navbar ul {
+        flex-direction: column; 
+        text-align: center;
+    }
+}
+
+/* mobile phone responsiveness */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .cta-button {
+        width: 100%;  
+        padding: 15px;
+    }
+
+    .form-container {
+        padding: 20px;  
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; 
+    }
+}
