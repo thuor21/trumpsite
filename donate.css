@@ -5,8 +5,9 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
 nav {
-  background: darkblue;
+
   height: 15vh;
   display: flex;
   align-items: center;
@@ -229,7 +230,7 @@ button:hover {
 }
 
 button:active {
-  background: rgb(253, 53, 53);
+  background: rgb(8, 8, 8);
 }
 
 .donate {

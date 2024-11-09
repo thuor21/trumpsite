@@ -7,19 +7,26 @@
   <title>Donate page</title>
 </head>
 <link rel="stylesheet" href="donate.css">
+<link rel="stylesheet" href="style.css">
 <script src="donate.js"></script>
 
 <body>
-
-  <nav class="nav">
-    <div class="logo"><img src="images/logo.png" alt="logo"></div>
-    <div class="nav_items">
-      <a href="Home.html">Home</a>
-      <a href="">About</a>
-      <a href="">Event</a>
-      <a href="Donate.html">Donate</a>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="Campaign Logo">
     </div>
-  </nav>
+    <nav>
+      <ul>
+
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="event.html">Events</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <nav class="nav2">
     <marquee behavior="circular" direction="right">
       </div>
@@ -132,7 +139,19 @@
             </div>
 
             <p class="last">Give in honour to other person</p>
-            <div><button>Donate Now</button></div>
+            <div class="donatebutton"><button
+                style="width: 9rem;height:4rem ;border-radius:20px; color: white;background: red; ">Donate
+                Now</button></div>
+            <style>
+              .donate {
+                cursor: pointer;
+
+              }
+
+              .donatebutton button:hover {
+                color: black;
+              }
+            </style>
           </form>
         </div>
       </div>
