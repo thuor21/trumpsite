@@ -7,7 +7,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    transition: all 0.3s ease;  /* Smooth transition */
+    transition: all 0.3s ease;
+    /* Smooth transition */
 }
 
 /* Color Palette */
@@ -32,42 +33,43 @@ header {
     width: 100px;
     height: 40px;
 }
+
 /* navigation bar */
 nav {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     padding: 20px;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  nav ul li {
+}
+
+nav ul li {
     margin: 0 10px;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li a {
     text-decoration: none;
-    color: var(--primary-dark); 
+    color: var(--primary-dark);
     padding: 10px 20px;
-    background-color: var(--primary-light); 
+    background-color: var(--primary-light);
     border: 2px solid var(--button-color);
-    border-radius: 8px; 
+    border-radius: 8px;
     font-size: 16px;
     display: block;
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; 
-  }
-  
-  nav ul li a:hover {
-    transform: scale(1.1); 
-    background-color: var(--primary-blue); 
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    transform: scale(1.1);
+    background-color: var(--primary-blue);
     color: var(--button-color);
-  }
-  
+}
+
 
 /* Introduction Section */
 .introduction {
@@ -134,7 +136,7 @@ nav {
 }
 
 .highlight h3 {
-    color: var(--primary-blue);
+    color: orangered;
     margin-bottom: 0.5em;
 }
 
@@ -174,7 +176,8 @@ nav {
 
 .point h3 {
     color: var(--primary-blue);
-    margin-bottom: 0.5em;}
+    margin-bottom: 0.5em;
+}
 
 
 /* Goals Section */
@@ -276,8 +279,9 @@ nav {
 .donate-button:hover {
     background-color: #ffa000;
 }
+
 /* gallery slider*/
-.banner{
+.banner {
     width: 100%;
     height: 100vh;
     text-align: centre;
@@ -285,7 +289,8 @@ nav {
     position: relative;
 
 }
-.banner .slider{
+
+.banner .slider {
     position: absolute;
     width: 200px;
     height: 250px;
@@ -293,44 +298,48 @@ nav {
     left: calc(50% - 100px);
     transform-style: preserve-3d;
     transform: perspective(1000px);
-    animation: autoRun 30s linear infinite ;
+    animation: autoRun 30s linear infinite;
     z-index: 2;
 
 }
-@keyframes autoRun{
-    from{
+
+@keyframes autoRun {
+    from {
         transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
-    }to{
-        transform: perspective(1000px) rotateX(-10deg) rotateY(360deg); 
+    }
+
+    to {
+        transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);
     }
 
 }
-.banner .slider .item{
+
+.banner .slider .item {
     position: absolute;
     inset: 0 0 0 0;
     transform:
-        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg ))
-        translateZ(550px);
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
 
 }
-.banner .slider .item img{
+
+.banner .slider .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.banner .content .model{
-  background-image: url(images/image12.png);  
-  width: 100%;
-  height: 70vh;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-size: auto 120%;
-  background-repeat: no-repeat;
-  background-position: top center;
-  z-index: 1;
-  background-color: transparent;
+.banner .content .model {
+    background-image: url(images/image12.png);
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 120%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+    background-color: transparent;
 }
 
 /* Footer */
@@ -354,13 +363,13 @@ footer {
 .social-icons a {
     margin: 0 15px;
     display: inline-block;
-    transition: transform 0.3s ease, opacity 0.3s ease; 
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .social-icons img {
-    width: 30px; 
+    width: 30px;
     height: auto;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .social-icons a:hover img {
@@ -368,7 +377,7 @@ footer {
 }
 
 .social-icons a:hover {
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 
@@ -380,7 +389,7 @@ footer {
 
 /* Introduction Section */
 .intro {
-    background-color: var(--primary-dark); 
+    background-color: var(--primary-dark);
     color: var(--primary-light);
     padding: 40px;
     text-align: center;
@@ -405,7 +414,7 @@ footer {
     margin: 0 auto;
     background-color: var(--primary-light);
     padding: 30px;
-    border: 2px solid var(--primary-dark); 
+    border: 2px solid var(--primary-dark);
     border-radius: 8px;
 }
 
@@ -438,11 +447,11 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-    border-color: var(--button-color); 
+    border-color: var(--button-color);
 }
 
 form textarea {
-    height: 150px; 
+    height: 150px;
 }
 
 form button {
@@ -457,13 +466,14 @@ form button {
 }
 
 form button:hover {
-    background-color: var(--button-color); 
+    background-color: var(--button-color);
     transform: scale(1.05);
 }
 
 
 /* General Styles for New Sections */
-.about, .vision {
+.about,
+.vision {
     padding: 4em 2em;
     text-align: center;
 }
@@ -517,9 +527,10 @@ form button:hover {
 .events li:hover {
     color: var(--button-color);
 }
+
 /* Wrapper for the shared background image */
 .vision-events-wrapper {
-    background-image: url('images/background.jpeg'); 
+    background-image: url('images/background.jpeg');
     background-size: cover;
     background-position: center;
     padding: 4em 2em;
@@ -528,7 +539,7 @@ form button:hover {
     flex-direction: column;
     gap: 2em;
     border-radius: 8px;
-    position: relative; 
+    position: relative;
 }
 
 .vision-events-wrapper::before {
@@ -538,7 +549,8 @@ form button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Dark overlay */
     z-index: 1;
 }
 
@@ -546,7 +558,7 @@ form button:hover {
 .vision,
 .events {
     position: relative;
-    z-index: 2; 
+    z-index: 2;
     text-align: center;
     padding: 3em 2em;
     background-color: rgba(0, 0, 0, 0.5);
@@ -586,7 +598,7 @@ form button:hover {
     }
 
     .navbar ul {
-        flex-direction: column; 
+        flex-direction: column;
         text-align: center;
     }
 }
@@ -606,15 +618,15 @@ form button:hover {
     }
 
     .cta-button {
-        width: 100%;  
+        width: 100%;
         padding: 15px;
     }
 
     .form-container {
-        padding: 20px;  
+        padding: 20px;
     }
 
     .grid-container {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 }
