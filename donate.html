@@ -61,7 +61,7 @@
             <h4>The Trump team is on the ground to support<br> Democrats who will stand up to the Unfair<br>
               administration, and we need you to join us. Donate now<br> to help us win critical races in the
               battlegrounds.</h4>
-            <h2>Choose an amount:</h2>
+            <!-- <h2>Choose an amount:</h2>
             <p>Your contribution will benefit Trump Victory Fund.</p>
 
             <div class="amount-options">
@@ -76,82 +76,96 @@
               <button>$2,000</button>
               <input type="text" placeholder="Other amount in $" class="custom-amount">
             </div>
+            --->
 
             <div class="option">
               <h2>Make it monthly!</h2>
-              <label><input type="checkbox">Monthly</label>
+              <!-- <label><input type="checkbox">Monthly</label>-->
               <h4>Recurring contributions help us create budgets, hire staff, and plan ahead.</h4>
             </div>
 
             <h4>Payment Method:</h4>
             <div class="payment-options">
               <label><input type="radio" name="payment-method" value="card"> Credit/Debit Card</label>
-              <label><input type="radio" name="payment-method" value="paypal"> PayPal</label>
+              <br>
+              <!--<label></label> <input type="radio" name="cash" value="cash">Cash</label>
+              <br>
+              <label><a href="www.paypal.com"><input type="radio" name="payment-method" value="paypal">
+                  PayPal</a></label>
               <label><input type="radio" name="payment-method" value="bank"> Bank Transfer</label>
             </div>
-
-
-            <div id="card-details" class="card-details">
-              <h4>Enter your Card Details:</h4>
-              <div class="input-box">
-                <input type="text" placeholder="Card Number" class="card-input">
-              </div>
-              <div class="card-info">
-                <div class="input-box">
-                  <input type="text" placeholder="Expiration Date (MM/YY)" class="card-input">
-                </div>
-                <div class="input-box">
-                  <input type="text" placeholder="CVV" class="card-input">
-                </div>
-              </div>
-
+          
+              <label><input type="radio" name="cash" value="card"> Cash</label>
               <br>
-              <div class="pin">
-                <input type="text" placeholder="PIN" class="card-input">
+              <label><input type="radio" name="paypal" value="paypal"> Paypal</label>
+              <br>
+              <label><input type="radio" name="payment-method" value="bank"> Credit/Debit Card</label>
+              <br>
+
+              <div id="card-details" class="card-details">
+                <h4>Enter your Card Details:</h4>
+                <br>
+                <div class="input-box">
+                  <input type="text" placeholder="Card Number" class="card-input">
+                </div>
+                <br>
+                <div class="card-info">
+                  <div class="input-box">
+                    <input type="text" placeholder="Expiration Date (MM/YY)" class="card-input">
+                  </div>
+                  <br>
+                  <div class="input-box">
+                    <input type="text" placeholder="CVV" class="card-input">
+                  </div>
+                </div>
+
+                <br>
+                 <div class="pin">
+                  <input type="text" placeholder="PIN" class="card-input">
+                </div>
               </div>
-            </div>
+            -->
+              <div id="bank-details" class="hidden">
+                <h4>Bank Transfer Details:</h4>
+                <label for="bank-name">Bank Name:</label>
+                <input type="text" id="bank-name" placeholder="Enter Bank Name" required>
 
-            <div id="bank-details" class="hidden">
-              <h4>Bank Transfer Details:</h4>
-              <label for="bank-name">Bank Name:</label>
-              <input type="text" id="bank-name" placeholder="Enter Bank Name" required>
+                <label for="account-number">Account Number:</label>
+                <input type="text" id="account-number" placeholder="Enter Account Number" required>
 
-              <label for="account-number">Account Number:</label>
-              <input type="text" id="account-number" placeholder="Enter Account Number" required>
+                <label for="pin">PIN:</label>
+                <input type="password" id="pin" placeholder="Enter PIN" required>
+              </div>
 
-              <label for="pin">PIN:</label>
-              <input type="password" id="pin" placeholder="Enter PIN" required>
-            </div>
-
-            <h4>Name</h4>
-            <div class="input-box">
-              <input type="text" placeholder="">
-            </div>
-
-            <h4>Email</h4>
-            <div class="input-box">
-              <input type="text" placeholder="">
-
-              <h4>state</h4>
+              <h4>Name</h4>
               <div class="input-box">
                 <input type="text" placeholder="">
               </div>
-            </div>
 
-            <p class="last">Give in honour to other person</p>
-            <div class="donatebutton"><button
-                style="width: 9rem;height:4rem ;border-radius:20px; color: white;background: red; ">Donate
-                Now</button></div>
-            <style>
-              .donate {
-                cursor: pointer;
+              <h4>Email</h4>
+              <div class="input-box">
+                <input type="text" placeholder="">
 
-              }
+                <h4>state</h4>
+                <div class="input-box">
+                  <input type="text" placeholder="">
+                </div>
+              </div>
 
-              .donatebutton button:hover {
-                color: black;
-              }
-            </style>
+              <p class="last">Give in honour to other person</p>
+              <div class="donatebutton"><button
+                  style="width: 9rem;height:4rem ;border-radius:20px; color: white;background: red; ">Donate
+                  Now</button></div>
+              <style>
+                .donate {
+                  cursor: pointer;
+
+                }
+
+                .donatebutton button:hover {
+                  color: black;
+                }
+              </style>
           </form>
         </div>
       </div>
@@ -177,11 +191,11 @@
     <div class="column-left">
       <h3>Reach us</h3>
       <h6 class="list">
-        <ul><a href="">Contacts</a></ul>
-        <ul><a href="">Home</a></ul>
-        <ul><a href="">About</a></ul>
-        <ul><a href="">Donate</a></ul>
-        <ul><a href="">Event</a></ul>
+
+        <ul><a href="index.html">Home</a></ul>
+        <ul><a href="event.html">Events</a></ul>
+        <ul><a href="donate.html">Donate</a></ul>
+        <ul><a href="get-involved.html">Get In Touch With Us</a></ul>
       </h6>
     </div>
 
