@@ -7,14 +7,14 @@ $phone = $_POST['phone'] ?? null;
 $message = $_POST['message'] ?? null;
 
 // Connect to the database
-$conn = new mysqli('localhost', 'root', '42276879', 'rest'); // Make sure 'final' is the correct database name
+$conn = new mysqli('localhost', 'root', '42276879', 'mydb'); // Make sure 'final' is the correct database name
 
 // Check the connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } else {
     // Prepare the SQL statement with the table name and bind parameters correctly
-    $stmt = $conn->prepare("INSERT INTO ui (name,email, phone, message) VALUES (?,?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO details (name,email, phone, message) VALUES (?,?, ?, ?)");
     
     if (!$stmt) {
         die("Error preparing statement: " . $conn->error);
