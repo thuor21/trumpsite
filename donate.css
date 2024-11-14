@@ -1,41 +1,260 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+  overflow: auto;
 }
 
-header,
-footer {
-  background-color: #333;
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
+  /* Smooth transition */
+}
+
+/* Color Palette */
+:root {
+  --primary-dark: #1b1f3a;
+  --primary-blue: #283593;
+  --primary-light: #e3f2fd;
+  --text-light: #ffffff;
+  --button-color: #ffb300;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: var(--primary-dark);
+}
+
+.logo img {
+  width: 100px;
+  height: 40px;
+}
+
+/* navigation bar */
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--primary-dark);
+  padding: 10px 20px;
+  background-color: var(--primary-light);
+  border: 2px solid var(--button-color);
+  border-radius: 8px;
+  font-size: 16px;
+  display: block;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  transform: scale(1.1);
+  background-color: var(--primary-blue);
+  color: var(--button-color);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f1f1f1;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #2C3E50;
+}
+
+/* Styling the logo (your image) */
+.logo {
+  font-size: 3rem;
+}
+
+
+.header h1 {
+  font-size: 2.5rem;
+}
+
+
+/* Background Image */
+body {
+  background-image: url('trump2.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Header Styling */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: darkblue;
   color: white;
-  padding: 10px 0;
+  height: 20vh;
+  padding: 2rem;
 }
 
-.image-wrapper {
-  position: relative;
+a {
+  color: white;
+  font-size: 1rem;
+  margin: 10px;
+}
+
+.hero {
+  display: grid;
+  background: url(images/trump2.webp);
+  justify-content: end;
+  margin: 3px;
   overflow: hidden;
-  height: 400px;
+  padding-right: 0.05rem;
+  padding-top: 0.5rem;
+  padding-bottom: 3rem;
+  padding-left: 20rem;
+
 }
 
-.background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+h5 {
+  margin-top: 2rem;
 }
 
-.donation-form-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 25px;
-  border-radius: 10px;
-  color: #fff;
-  text-align: center;
+.donation-container {
+  display: flexbox;
+  background-color: white;
+  margin: 2rem;
   width: 90%;
-  max-width: 450px;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Additional styling for alignment, button spacing, and colors */
+.donation-container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.donation-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+
+.donation-options input {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.donation-summary h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.payment-method,
+.form input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: black;
+  color: white;
+  font-size: 1rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  height: 4rem;
+}
+
+button:hover {
+  background: rgb(81, 81, 80);
+}
+
+button:active {
+  background: red;
+}
+
+button[type="submit"] {
+  background: #005B9A;
+  color: white;
+  padding: 1rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: rgb(81, 81, 80);
+}
+
+button[type="submit"]:active {
+  background: red;
+}
+
+input {
+  height: 2rem;
+  margin: 1rem;
+}
+
+.other-amount {
+  height: 4rem;
+  border-radius: 1rem;
+}
+
+.disclaimer p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1d3a87;
+  color: white;
+}
+
+.footer a {
+  color: #008CBA;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

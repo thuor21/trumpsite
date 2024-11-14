@@ -4,19 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donate Page</title>
+  <title>TRUMP's Campaign Donation</title>
   <link rel="stylesheet" href="donate.css">
-  <script src="donate.js" defer></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <!-- Header Section -->
   <header>
     <div class="logo">
       <img src="images/logo.png" alt="Campaign Logo">
     </div>
     <nav>
       <ul>
+
         <li><a href="index.html">Home</a></li>
+
         <li><a href="event.html">Events</a></li>
         <li><a href="donate.html">Donate</a></li>
         <li><a href="get-involved.html">Get Involved</a></li>
@@ -24,75 +27,99 @@
     </nav>
   </header>
 
-  <div class="image-wrapper">
-    <img src="images/Screenshot (12).png" alt="Campaign Image" class="background-image">
-    <div class="donation-form-wrapper">
-      <form id="donation-form" onsubmit="handleSubmit(event)">
-        <h2>Support Our Cause</h2>
-        <p>Your donation can make a difference. Choose your donation amount and payment method below.</p>
+  <!--
+  <nav class="nav">
+    <div class="logo">DONATE</div>
+    <div>
+      <ul>
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Event.html">Event</a>
+        <a href="Donate.html">Donate</a>
+      </ul>
+    </div>
+  </nav>
+-->
+  <div class="hero">
+    <div class="column-left">
 
-        <h4>Choose an Amount:</h4>
-        <div class="amount-options">
-          <button type="button" onclick="setAmount(10)">$10</button>
-          <button type="button" onclick="setAmount(50)">$50</button>
-          <button type="button" onclick="setAmount(100)">$100</button>
-          <button type="button" onclick="setAmount(250)">$250</button>
-          <button type="button" onclick="setAmount(500)">$500</button>
-          <input type="text" id="custom-amount" placeholder="Other amount" class="custom-amount">
+    </div>
+
+    <div class="column-right">
+      <section class="donation-container">
+
+        <h2>Support Our Campaign</h2>
+        <p>Your contribution helps us make a difference. Select an amount below to get started.</p>
+
+        <div class="donation-options">
+          <button onclick="setDonation(50)">$50</button>
+          <button onclick="setDonation(100)">$100</button>
+          <button onclick="setDonation(200)">$200</button>
+          <button onclick="setDonation(250)">$250</button>
+          <button onclick="setDonation(500)">$500</button>
+          <button onclick="setDonation(1000)">$1000</button>
+          <button onclick="setDonation(5000)">$5000</button>
+          <button onclick="setDonation(10000)">$10000</button>
+          <input type="number" id="custom-amount" placeholder="Other Amount" oninput="updateCustomAmount()"
+            class="other-amount">
         </div>
 
-        <h4>Payment Method:</h4>
-        <div class="payment-options">
-          <label><input type="radio" name="payment-method" value="paypal" onclick="openPayPal()"> PayPal</label>
-          <label><input type="radio" name="payment-method" value="cash" onclick="showCashAmount()"> Cash</label>
-          <label><input type="radio" name="payment-method" value="bank" onclick="showBankDetails()"> Bank
-            Transfer</label>
+        <div class="donation-summary">
+          <h3>Donation Summary</h3>
+          <p id="selected-amount">$0</p>
+
+          <label>
+            <input type="checkbox" id="recurring" onclick="toggleRecurring()">
+            Make this a monthly donation
+          </label>
+
+          <div class="payment-method">
+            <label for="payment">Choose your payment method:</label>
+            <select id="payment" name="payment">
+              <option value="paypal">PayPal</option>
+              <option value="chase">Chase Bank</option>
+              <option value="bankofamerica">Bank of America</option>
+              <option value="wellsfargo">Wells Fargo</option>
+              <option value="creditcard">Credit Card</option>
+            </select>
+          </div>
+
+          <form id="donation-form" onsubmit="submitDonation(event)">
+            <input type="text" placeholder="Full Name" id="name" required>
+            <input type="email" placeholder="Email Address" id="email" required>
+            <input type="text" placeholder="Address" id="address" required>
+            <input type="tel" placeholder="Phone Number" id="contact" required>
+
+            <label for="state">State:</label>
+            <select id="state" name="state" required>
+              <option value="" disabled selected>Select State</option>
+
+            </select>
+
+            <button type="submit">Donate Now</button>
+          </form>
         </div>
 
-        <div id="cash-amount" class="cash-amount hidden">
-          <label for="cash-donation-amount">Enter Amount:</label>
-          <input type="text" id="cash-donation-amount" placeholder="Enter Cash Amount">
+        <div class="disclaimer">
+          <h5>Donation terms</h5>
+          <p>I am a U.S. citizen or lawfully admitted permanent resident (i.e., green card holder).</p>
+          <p>This contribution is made from my own funds, and funds are not being provided to me by another person or
+            entity for the purpose of making this contribution.</p>
+          <p>I am at least eighteen years old.</p>
+          <p>I am not a federal contractor.</p>
+          <p>I am making this contribution with my own personal credit card and not with a corporate or business credit
+            card or a card issued to another person.</p>
+          <p>Contributions or gifts to TRUMP's Campaign are not tax deductible.</p>
         </div>
-
-        <div id="bank-details" class="bank-details hidden">
-          <h4>Bank Transfer Details:</h4>
-          <label for="bank-name">Bank Name:</label>
-          <select id="bank-name">
-            <option value="">Select Bank</option>
-            <option value="Equity Bank">Equity Bank</option>
-            <option value="KCB Bank">KCB Bank</option>
-            <option value="Co-operative Bank">Co-operative Bank</option>
-            <option value="Absa Bank">Absa Bank</option>
-          </select>
-          <label for="account-number">Account Number:</label>
-          <input type="text" id="account-number" placeholder="Account Number">
-        </div>
-
-        <button type="submit" class="submit-button">Donate Now</button>
-      </form>
+      </section>
     </div>
   </div>
-
   <footer class="footer">
-    <div class="column-left">
-      <h3>Reach us</h3>
-      <ul class="list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="event.html">Events</a></li>
-        <li><a href="donate.html">Donate</a></li>
-        <li><a href="get-involved.html">Get Involved</a></li>
-      </ul>
-    </div>
-    <div class="column-right">
-      <h3>Social Media</h3>
-      <ul class="platforms">
-        <li><a href="https://www.facebook.com"><img src="images/facebook.jpeg" alt="Facebook"></a></li>
-        <li><a href="https://www.instagram.com"><img src="images/instagram.jpeg" alt="Instagram"></a></li>
-        <li><a href="https://www.twitter.com"><img src="images/twitter.jpeg" alt="Twitter"></a></li>
-        <li><a href="https://www.youtube.com"><img src="images/youtube.icon.png" alt="YouTube"></a></li>
-      </ul>
-    </div>
+    <p>&copy; 2024 TRUMP's Campaign. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact</a></p>
   </footer>
+
+  <script src="donate.js"></script>
 </body>
 
 </html>

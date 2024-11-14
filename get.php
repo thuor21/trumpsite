@@ -1,8 +1,8 @@
 <?php
 
 // Retrieve form data with checks to prevent warnings
-$name = $_POST['name'] ?? null;  // Using null as a fallback if 'Fullname' is not set
-$email = $_POST['email']?? null; // Using null as a fallback if 'Email';
+$name = $_POST['name'];  // Using null as a fallback if 'Fullname' is not set
+$email = $_POST['email'];
 $phone = $_POST['phone'] ?? null;
 $message = $_POST['message'] ?? null;
 
